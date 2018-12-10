@@ -1,0 +1,7 @@
+# symlink's all dotfiles to the user's home directory
+DOTFILES_DIR=$HOME/Documents/github/dotfiles/dotfiles
+FILES="$(ls -A $DOTFILES_DIR)"
+for f in $FILES
+do
+	ln -s $DOTFILES_DIR/$f $HOME/$f
+done

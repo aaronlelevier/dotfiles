@@ -1,0 +1,13 @@
+pullandpush () {
+    if [ $# -eq 0 ]
+    then
+        echo "branch name not specified"
+    else
+        branch=$1
+        git checkout master
+        git pull --rebase
+        git checkout $branch
+        git rebase origin/master
+        git push -u origin --force-with-lease $branch
+    fi
+}

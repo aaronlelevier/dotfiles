@@ -1,0 +1,12 @@
+# virtualenvs
+alias venv='source venv/bin/activate'
+alias mlvenv='source ~/Documents/ml/venv/bin/activate'
+
+# recursively delete all pyc files from current directory
+alias delpyc='find . -name \*.pyc -delete'
+
+# start redis server
+alias redis='~/redis-4.0.10/src/redis-server'
+
+# print file tree from current directory
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
