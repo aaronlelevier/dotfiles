@@ -10,3 +10,9 @@ alias redis='~/redis-4.0.10/src/redis-server'
 
 # print file tree from current directory
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+
+# rabbitmq
+alias rabbitmq-server='/usr/local/sbin/rabbitmq-server'
+
+# Android
+alias adb='/Users/aaron/Library/Android/sdk/platform-tools/adb'

@@ -1,3 +1,4 @@
+# pull master, rebase with feature branch and push
 pullandpush () {
     if [ $# -eq 0 ]
     then
@@ -9,5 +10,31 @@ pullandpush () {
         git checkout $branch
         git rebase origin/master
         git push -u origin --force-with-lease $branch
+    fi
+}
+
+# create a backup of a given database
+backupdb () {
+    if [ $# -eq 0 ]
+    then
+        echo "db_name not specified"
+    else
+        db_name=$1
+        db_name_copy=${db_name}_copy
+        psql -c "DROP DATABASE $db_name_copy;"
+        psql -c "CREATE DATABASE $db_name_copy WITH TEMPLATE $db_name;"
+    fi
+}
+
+# restore database from a given backup
+restoredb () {
+    if [ $# -eq 0 ]
+    then
+        echo "db_name not specified"
+    else
+        db_name=$1
+        db_name_copy=${db_name}_copy
+        psql -c "DROP DATABASE $db_name;"
+        psql -c "CREATE DATABASE $db_name WITH TEMPLATE $db_name_copy;"
     fi
 }
