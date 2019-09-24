@@ -38,3 +38,8 @@ restoredb () {
         psql -c "CREATE DATABASE $db_name WITH TEMPLATE $db_name_copy;"
     fi
 }
+
+# checks a Makefile
+check_makefile() {
+    cat -e -t -v $1
+}
