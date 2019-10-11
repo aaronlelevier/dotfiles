@@ -43,3 +43,12 @@ restoredb () {
 check_makefile() {
     cat -e -t -v $1
 }
+
+add_gen_server() {
+    if [ $# -eq 0 ]
+    then
+        echo "filename not specified"
+    else
+        curl "https://raw.githubusercontent.com/aaronlelevier/jaerlang2-code/master/code/gen_server_template.full" > $1
+    fi
+}
