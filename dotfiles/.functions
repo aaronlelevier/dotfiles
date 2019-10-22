@@ -52,3 +52,29 @@ add_gen_server() {
         curl "https://raw.githubusercontent.com/aaronlelevier/jaerlang2-code/master/code/gen_server_template.full" > $1
     fi
 }
+
+gittag () {
+    if [ $# -ne 1 ] ; then
+        echo "Need one argument, a git tag." 1>&2
+    else
+        tag="$1"
+        git tag -a "$tag" -m "$tag"
+        git push origin "$tag"
+    fi
+}
+
+gitFilesChanged() {
+    if ! git diff-index --quiet --cached HEAD; then
+        # Index has changes.
+        echo 1;
+    elif ! git diff-files --quiet; then
+        # Working tree has changes.
+        echo 1;
+    elif [ -n "`git ls-files --others --exclude-standard`" ]; then
+        # There are untracked unignored files.
+        echo 1;
+    else
+        # not git changes
+        echo 0;
+    fi
+}
