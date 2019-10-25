@@ -19,3 +19,5 @@ alias adb='/Users/aaron/Library/Android/sdk/platform-tools/adb'
 
 # tfx
 alias tfxvenv='source /Users/aaron/Documents/github/tfx/venv/bin/activate'
+
+alias utest='python -m unittest'
