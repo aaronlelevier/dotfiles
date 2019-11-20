@@ -20,4 +20,12 @@ alias adb='/Users/aaron/Library/Android/sdk/platform-tools/adb'
 # tfx
 alias tfxvenv='source /Users/aaron/Documents/github/tfx/venv/bin/activate'
 
+# Python
 alias utest='python -m unittest'
+
+# Erlang
+alias rebar3='/usr/local/bin/rebar3'
+
+alias rtest='rebar3 eunit'
+
+alias rrun='rebar3 release && rebar3 shell'
