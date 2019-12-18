@@ -78,3 +78,5 @@ gitFilesChanged() {
         echo 0;
     fi
 }
+
+showtags () { git for-each-ref --sort='-*authordate' --format="%(refname:short) %(taggerdate) %(subject) %(body)" refs/tags | head -20; }
