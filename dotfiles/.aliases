@@ -24,8 +24,14 @@ alias tfxvenv='source /Users/aaron/Documents/github/tfx/venv/bin/activate'
 alias utest='python -m unittest'
 
 # Erlang
-alias rebar3='/usr/local/bin/rebar3'
-
 alias rtest='rebar3 eunit'
 
-alias rrun='rebar3 release && rebar3 shell'
+alias rct='rebar3 ct'
+
+# collects new Apps and Deps, compiles and launches shell
+alias rReleaseAndShell='rebar3 do release, shell'
+
+# compiles existing Apps and Deps and launches shell
+alias rshell='rebar3 shell'
+
+alias rRelease='rebar3 release && _build/default/rel/motivatedcoder/bin/motivatedcoder console'
