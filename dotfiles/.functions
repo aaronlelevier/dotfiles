@@ -80,3 +80,7 @@ gitFilesChanged() {
 }
 
 showtags () { git for-each-ref --sort='-*authordate' --format="%(refname:short) %(taggerdate) %(subject) %(body)" refs/tags | head -20; }
+
+add_python_gitignore() {
+    curl https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore >> .gitignore
+}
