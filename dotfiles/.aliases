@@ -34,4 +34,4 @@ alias rReleaseAndShell='rebar3 do release, shell'
 # compiles existing Apps and Deps and launches shell
 alias rshell='rebar3 shell'
 
-alias rRelease='rebar3 release && _build/default/rel/motivatedcoder/bin/motivatedcoder console'
+alias rRelease='rebar3 release && rebar3 shell'
