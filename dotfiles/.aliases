@@ -35,3 +35,7 @@ alias rReleaseAndShell='rebar3 do release, shell'
 alias rshell='rebar3 shell'
 
 alias rRelease='rebar3 release && rebar3 shell'
+
+# lookup IP aliases
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
