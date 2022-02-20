@@ -43,3 +43,4 @@ alias localip="ipconfig getifaddr en0"
 # Erlang
 alias add_erlang_gitignore="curl https://raw.githubusercontent.com/github/gitignore/main/Erlang.gitignore > .gitignore"
 
+alias account="123456789012"
