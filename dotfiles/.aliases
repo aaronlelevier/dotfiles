@@ -39,3 +39,7 @@ alias rRelease='rebar3 release && rebar3 shell'
 # lookup IP aliases
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
+
+# Erlang
+alias add_erlang_gitignore="curl https://raw.githubusercontent.com/github/gitignore/main/Erlang.gitignore > .gitignore"
+
