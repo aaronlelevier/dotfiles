@@ -5,3 +5,6 @@ export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 # Golang
 export GO111MODULE="on"
 export PATH="$PATH:$(go env GOPATH)/bin"
+
+export DOCKER_HOST='unix:///Users/aaronlelevier/.local/share/containers/podman/machine/qemu/podman.sock'
+

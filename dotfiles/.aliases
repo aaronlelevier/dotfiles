@@ -48,3 +48,7 @@ alias account="123456789012"
 alias rr=rebar3
 
 alias open2="open -a /Applications/Sublime\ Text.app ."
+
+# k8s
+alias kubectl="minikube kubectl --"
+
