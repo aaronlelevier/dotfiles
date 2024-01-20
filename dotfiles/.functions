@@ -79,6 +79,10 @@ gitFilesChanged() {
     fi
 }
 
+gitDefaultBranch() { git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@' }
+
+gitCurrentBranch() { git rev-parse --abbrev-ref HEAD }
+
 showtags () { git for-each-ref --sort='-*authordate' --format="%(refname:short) %(taggerdate) %(subject) %(body)" refs/tags | head -20; }
 
 add_python_gitignore() {
