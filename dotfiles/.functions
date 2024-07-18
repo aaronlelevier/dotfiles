@@ -83,6 +83,10 @@ gitDefaultBranch() { git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/re
 
 gitCurrentBranch() { git rev-parse --abbrev-ref HEAD }
 
+gp() {
+    git push -u origin $(gitCurrentBranch)
+}
+
 showtags () { git for-each-ref --sort='-*authordate' --format="%(refname:short) %(taggerdate) %(subject) %(body)" refs/tags | head -20; }
 
 add_python_gitignore() {
