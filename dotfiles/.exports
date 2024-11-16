@@ -4,7 +4,8 @@ export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 
 # Golang
 export GO111MODULE="on"
-export PATH="$PATH:$(go env GOPATH)/bin"
+export GOPATH=$HOME/go
+export PATH="$PATH:$GOPATH/bin"
 
 # Erlang
 export PATH="$PATH:$HOME/Documents/erlang/erlang_ls/_build/default/bin"

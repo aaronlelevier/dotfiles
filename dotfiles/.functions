@@ -92,3 +92,11 @@ showtags () { git for-each-ref --sort='-*authordate' --format="%(refname:short) 
 add_python_gitignore() {
     curl https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore >> .gitignore
 }
+
+touch2 () {
+    F=$1
+    mkdir -p $(dirname $F) && touch $F
+}
+
+getPod () { kubectl get pod -l app=$1 -o jsonpath="{.items[0].metadata.name}" }
+
