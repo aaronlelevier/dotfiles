@@ -4,3 +4,4 @@ function parse_git_branch() {
 
 setopt PROMPT_SUBST
 export PROMPT='%F{grey}%n%f %F{cyan}%~%f %F{green}$(parse_git_branch)%f%F{normal}$%f '
+setopt INTERACTIVE_COMMENTS
